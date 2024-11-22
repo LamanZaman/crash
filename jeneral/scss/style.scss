@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+  }
+  
+
+  .way {
+    position: relative;
+    width: 800px;
+    height: 200px;
+    background: #2c3e50;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 5px solid #34495e;
+  }
+  
+  .car {
+    position: absolute;
+    bottom: 50px;
+    right: -100px;
+    width: 80px;
+    height: 40px;
+    animation: driveCar 4s linear forwards;
+  }
+  
+  .car img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .person {
+    position: absolute;
+    bottom: 50px;
+    left: 300px;
+    width: 30px;
+    height: 60px;
+    transform-origin: bottom center;
+  }
+  
+  .person img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .ambulance {
+    position: absolute;
+    bottom: 50px;
+    right: -120px;
+    width: 100px;
+    height: 50px;
+    display: none;
+  }
+  
+  .ambulance img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  @keyframes driveCar {
+    0% {
+      right: -100px;
+    }
+    100% {
+      right: 800px;
+    }
+  }
+  
+  @keyframes ambulanceArrive {
+    0% {
+      right: -120px;
+    }
+    50% {
+      right: 300px;
+    }
+    100% {
+      right: 800px;
+    }
+  }
+  
+  @keyframes fallPerson {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+  
